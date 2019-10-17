@@ -24,7 +24,8 @@ mongoose.connect('mongodb://localhost:27017/bunkey', (err, res) => {
   console.log("DB Online");
 });
 
-
 app.listen(process.env.PORT, () => {
   console.log(`escuchando puerto http://localhost:${process.env.PORT}`)
 })
+
+module.exports = app;

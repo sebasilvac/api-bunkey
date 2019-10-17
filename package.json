@@ -4,18 +4,23 @@
   "description": "Postulación Bunkey",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "test": "mocha test/*.js",
+    "seed": "node server/utils/seed.js"
   },
   "author": "Sebastián Silva",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.1",
     "mongoose": "^5.7.5",
-    "mongoose-unique-validator": "^2.0.3",
-    "underscore": "^1.9.1"
+    "mongoose-unique-validator": "^2.0.3"
   }
 }

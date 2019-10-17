@@ -37,6 +37,28 @@ app.post("/user", verificaToken, function(req, res) {
 });
 
 /**
+ * Listar usuarios
+ */
+app.get("/user", verificaToken, function(req, res) {
+  
+  User.find({})
+  .exec((err, userDB) => {
+
+    if (err) {
+      return res.status(400).json({
+        ok: false,
+        err
+      });
+    }
+
+    res.json({
+      ok: true,
+      user: userDB
+    });
+  });
+});
+
+/**
  * Creación de students
  */
 app.post("/student", verificaToken, function(req, res) {
